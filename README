@@ -3,3 +3,14 @@ Project Folder will contain the code to connect all three parts together.
 Contacts Folder
 Tasks Folder
 Calendar Folder
+
+
+--------------------------------------------------------------------------
+Git related things
+
+Fork -> create a copy of the repository to your account
+Clone -> download a copy of the repository (puts the project locally on your machine)
+Commit -> saves all the changes made to the code
+Push -> updates the repository on YOUR fork with the saved changes from the commit
+Push Upstream -> updates the repository of the ORIGIN with saved changes
+Branch ->  (still figuring this one out)
