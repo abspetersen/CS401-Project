@@ -8,11 +8,12 @@ package Calendar;
 import java.util.Calendar;
 import java.lang.String;
 
-// Event will be a class
+// Event will be an object that holds an event's name, date, and whether user
+// will be reminded of this event.
 public class Event {
-    String eventName;
-    Calendar eventTime;
-    boolean wantReminder;
+    String eventName;       // Name of event.
+    Calendar eventTime;     // Date of event.
+    boolean wantReminder;   // Set reminder?
     
     // Constructor.
     public Event(String name, Calendar time, boolean r) {
@@ -29,5 +30,10 @@ public class Event {
     // Getter for eventTime.
     public Calendar getEventTime() {
         return eventTime;
+    }
+    
+    // Getter for wantReminder.
+    public boolean getWantReminder() {
+        return wantReminder;
     }
 }

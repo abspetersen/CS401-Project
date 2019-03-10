@@ -6,5 +6,8 @@ package Calendar;
 
 
 public class testclass {
-    
+    public static void main(String[] args) {
+        CurrentWeek thisWeek = new CurrentWeek();
+        thisWeek.displayDays();
+    }
 }

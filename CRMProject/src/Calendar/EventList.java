@@ -11,17 +11,29 @@ import java.util.ArrayList;
 // EventList will be a class that stores a list of Events.
 public class EventList {
     String listDesc;        // Description of the list of Events.
-    List<Event> eventList;         // Declare List of Events called eventList.
+    List<Event> eventList;      // Declare List of Events called eventList.
+    int listSize;               // Number of Events in list.
     
     // Constructor.
     public EventList(String desc) {
         this.listDesc = desc;
         eventList = new ArrayList<>();
+        listSize = 0;
     }
     
     // Getter for listDesc.
     public String getListDesc() {
         return listDesc;
+    }
+    
+    // Getter for eventList.
+    public List getEventList() {
+        return eventList;
+    }
+    
+    // Getter for listSize.
+    public int getListSize() {
+        return listSize;
     }
     
     // Getter for Event in list by index. This could be useful for retrieving
