@@ -13,7 +13,7 @@ public class CurrentWeek {
     Day today, day2, day3, day4, day5, day6, day7; // Days for the week.
     List<Day> currentWeek;     // List to hold Days of the week.
     
-    // Constructor.
+    // Constructor. This is a little wonky so I will probably have to change this.
     public CurrentWeek() {
         currentWeek = new ArrayList<>();
         

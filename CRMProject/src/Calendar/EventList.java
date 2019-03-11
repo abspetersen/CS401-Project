@@ -17,8 +17,8 @@ public class EventList {
     // Constructor.
     public EventList(String desc) {
         this.listDesc = desc;
-        eventList = new ArrayList<>();
-        listSize = 0;
+        this.eventList = new ArrayList<>();
+        this.listSize = 0;
     }
     
     // Getter for listDesc.
