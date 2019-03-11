@@ -3,12 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package consoleKit;
+package features.model;
 
 /**
  *
  * @author abbypetersen
  */
-public interface MenuItem {
-    public void execute();
+public class Task {
+    
+    private final String title;
+    private final String desc;
+    
+    public Task(String _title, String _desc){
+        title = _title;
+        desc = _desc;
+    }
 }

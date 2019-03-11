@@ -3,20 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package consoleKit;
+package features.consoleView;
 
 /**
  *
- * @author Genevieve
+ * @author abbypetersen
  */
-public class QuitCMD implements MenuItem{
-    @Override
-    public void execute() {
-        System.exit(0);
+public class ContactsMenu {
+    
+     public void execute(){
+        
     }
     
+     // Description of this command
     @Override
     public String toString() {
-        return "Quit";
-    }
+        return "Contacts";
+    } 
+   
 }
