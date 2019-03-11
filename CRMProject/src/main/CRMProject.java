@@ -18,6 +18,7 @@ public class CRMProject {
         // TODO code application logic here
         
         //crap
+        //tests
     }
     
 }
