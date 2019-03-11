@@ -11,6 +11,7 @@ import features.model.EventList;
 /**
  *
  * @author abbypetersen
+ * // hello
  */public class CalendarMenu implements MenuItem{
     
     private EventList week;
