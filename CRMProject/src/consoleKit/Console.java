@@ -34,6 +34,7 @@ public class Console {
         for (int choice = 0; choice < options.size(); choice++) {
             System.out.println(choice + ". " + options.get(choice));
         }
+        
         return Console.intInRange("Enter an option", 0, options.size() - 1);
     }
     
