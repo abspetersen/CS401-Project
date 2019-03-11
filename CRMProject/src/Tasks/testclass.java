@@ -7,4 +7,8 @@ package Tasks;
 
 public class testclass {
     
+    public static void main(String[] args) {
+        TaskMenu menu = new TaskMenu();
+        menu.printMenu();
+    }
 }
