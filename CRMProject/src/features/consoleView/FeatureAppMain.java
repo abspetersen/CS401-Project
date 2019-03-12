@@ -9,6 +9,7 @@ import consoleKit.Menu;
 import consoleKit.MenuStack;
 import consoleKit.QuitCMD;
 import features.model.AllTasks;
+import features.model.CurrentWeek;
 
 /**
  *
@@ -18,17 +19,22 @@ public class FeatureAppMain {
     public static void main(String[] args) {
         MenuStack menus = new MenuStack();
         
+        //calendar stuff
+        CurrentWeek thisWeek = new CurrentWeek();   // Initialize CurrentWeek list?
+        //
+        
         //junk for Tasks
         AllTasks tasklist = new AllTasks();
         //
         
         Menu mainMenu = new Menu("Main Menu", menus);
         mainMenu.add(new QuitCMD());
-        mainMenu.add(new CalendarMenu(menus));
+        mainMenu.add(new CalendarMenu(menus, thisWeek));    // need to pass thisWeek?
         mainMenu.add(new TasksMenu(menus, tasklist));
         mainMenu.add(new ContactsMenu(menus));
         
     
+        
         
         System.out.println("Customer Relations Management");
         while (true)

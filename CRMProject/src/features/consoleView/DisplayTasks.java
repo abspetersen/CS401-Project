@@ -11,21 +11,24 @@ import features.model.AllTasks;
 
 public class DisplayTasks implements MenuItem {
 
-    private AllTasks list;
+      public ContactList contacts;
     
-    public DisplayTasks(AllTasks list) {
-        this.list = list;
+    public DisplayContacts(ContactList _contacts){
+        contacts = _contacts;
     }
     
-     public void execute(){
-        System.out.println("Displaying tasks...");
-        
-        list.viewList();
+    @Override
+    public void execute(){
+        for (Contact con: contacts.getContacts()){
+            System.out.print(con.getName() + ": ");
+            System.out.print(con.getPhone() + ", ");
+            System.out.print(con.getEmail() + ". \n");
+        }
     }
     
     // Description of this command
     @Override
     public String toString() {
-        return "Display Tasks";
-    }
+        return "View All Contacts";
+    } 
 }
