@@ -16,18 +16,25 @@ import consoleKit.ReturnFromMenu;
  */
 public class ContactsMenu implements MenuItem{
     
-    private MenuStack menus;
+  private final Menu menu;
+    private final MenuStack menus;
+    private final AllContacts contacts;
     
-    public ContactsMenu(MenuStack menus) {
-        this.menus = menus;
+    public ContactsMenu(AllContacts _contacts, Menu _menu, MenuStack _menus){
+        contacts = _contacts;
+        menu = _menu;
+        menus = _menus;
     }
     
-    public void execute(){
-        Menu contactsSubMenu = new Menu("Contacts Submenu", menus);
+     public void execute(){
+      
+         // add new menu for this list
         
-        contactsSubMenu.add(new DisplayContacts());
-        contactsSubMenu.add(new AddContact());
-        contactsSubMenu.add(new ReturnFromMenu("Main Menu", menus));
+        Menu subMenu = new Menu(chosenList.toString(), menus);
+        subMenu.add(new QuitCMD());
+        subMenu.add(new ReturnFromMenu(menu.toString(), menus));
+        subMenu.add(new DisplayContacts(contacts));
+        subMenu.add(new AddContact(contacts));
     }
     
      // Description of this command
