@@ -18,28 +18,36 @@ public class AddEvent implements MenuItem {
     
     public AddEvent(CurrentWeek thisWeek) {
         this.thisWeek = thisWeek;
-        dayChoice = -1;
     }
     
     public void execute(){
         // ADDING EVENT WILL DSPLAY DAYS OF WEEK, ASK FOR CHOICE OF WHICH DAY TO ADD EVENT TO, GET THAT DAY'S INFO AND PASS INFO TO EVENT TO ADD, ADD EVENT TO THAT DAY's EVENTLIST
         // DISPLAY THE DAYS, GET THE CHOICE, ADD NEW EVENT WITH THE INFO TO THE LIST
-        while(dayChoice < 0 || dayChoice > 6) {
-            int count = 0;
-            System.out.println("This Week:");
-            for (Day d : thisWeek.getCurrentWeek()) {
-                System.out.println(count + ". " + d.getDaysDate());
-                count++;
-            }
-            System.out.println("Choose day to add event: ");
-            Scanner scanner = new Scanner(System.in);
-            dayChoice = scanner.nextInt();
-        }
+        displayWeek();
+        setDayChoice();
         Day d = thisWeek.getCurrentWeek().get(dayChoice);
         Calendar c = d.getDay();
         Event newEvent = new Event(setEventName(), c, setWantReminder());
         d.getDaysEvents().addEvent(newEvent);
-        
+        dayChoice = -1;
+    }
+    
+    public void setDayChoice() {
+        dayChoice = -1;
+        do {
+            System.out.println("Choose day to add event: ");
+            Scanner scanner = new Scanner(System.in);
+            dayChoice = scanner.nextInt();
+        } while (dayChoice < 0 || dayChoice > 6); 
+    }
+    
+    public void displayWeek() {
+        int count = 0;
+        System.out.println("This Week:");
+        for (Day d : thisWeek.getCurrentWeek()) {
+            System.out.println(count + ". " + d.getDaysDate());
+            count++;
+        }
     }
     
     public String setEventName() {
