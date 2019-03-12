@@ -5,7 +5,9 @@
  */
 package features.consoleView;
 
+import consoleKit.Menu;
 import consoleKit.MenuItem;
+import consoleKit.MenuStack;
 import features.model.EventList;
 
 /**
@@ -14,17 +16,17 @@ import features.model.EventList;
  * // hello
  */public class CalendarMenu implements MenuItem{
     
-    private EventList week;
+    private MenuStack menus;
     
-    public CalendarMenu(EventList _week){
-        week = _week;
+    public CalendarMenu(MenuStack menus){
+        this.menus = menus;
     }
     
     public void execute(){
-        
-        
-        subMenu.add(new DisplayWeek(chosenList));
-        subMenu.add(new AddEvent(chosenList));
+        Menu calendarSubMenu = new Menu("Calendar Submenu", menus);
+        calendarSubMenu.add(new DisplayWeek());
+        calendarSubMenu.add(new AddEvent());
+      
     }
     
     

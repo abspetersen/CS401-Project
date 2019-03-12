@@ -5,12 +5,14 @@
  */
 package features.consoleView;
 
+import consoleKit.*;
+
 /**
  *
  * @author abbypetersen
  */
-public class DisplayWeek {
-    
+public class DisplayWeek implements MenuItem {
+    // SET UP CURRENTWEEK, DISPLAY DAYS, DISPLAY EVENTS
     public void execute(){
         for()
     }

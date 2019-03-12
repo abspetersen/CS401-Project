@@ -30,6 +30,7 @@ public class MenuStack {
         menus.removeFirst();
     }
     
+    //Deque method
     public void run() {
         menus.getFirst().execute();
     }
