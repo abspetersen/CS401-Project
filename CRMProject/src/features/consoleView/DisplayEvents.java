@@ -12,7 +12,7 @@ package features.consoleView;
 public class DisplayEvents {
     
      public void execute(){
-        
+        // DISPLAY EVENTS WILL CYCLE THROUGH DAYS OF WEEK, CYCLE THROUGH EACH DAY'S EVENTLIST AND DISPLAY EVENT INFO       
     }
     
      // Description of this command
