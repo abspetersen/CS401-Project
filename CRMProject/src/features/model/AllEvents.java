@@ -39,7 +39,7 @@ public class AllEvents {
 
     // Add an event to the "current" list
     public void addEvent(Event ev) {
-        allevs.get(chosenList).add(ev);
+        //allevs.get(chosenList).add(ev);
     }
 
     //get all events for this week, needs to be changed to display weeks reminders for one category and months reminders for the other
