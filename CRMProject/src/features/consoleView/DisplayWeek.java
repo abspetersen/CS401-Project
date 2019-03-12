@@ -1,11 +1,19 @@
 
 package features.consoleView;
 import consoleKit.*;
+import features.model.*;
 
 public class DisplayWeek implements MenuItem {
     
+    CurrentWeek thisWeek;
+    
+    public DisplayWeek(CurrentWeek thisWeek) {
+        this.thisWeek = thisWeek;
+    }
+    
+    // Display dates and number of events in that Day's EventList.
     public void execute(){
-        System.out.println("We're in the DisplayWeek");
+        thisWeek.displayDays();
     }
     
     // Description of this command

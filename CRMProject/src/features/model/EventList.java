@@ -58,7 +58,7 @@ public class EventList {
         listSize--;
     }
 
-    
+    /*
     public List<Event> getThisWeekEvents() {
         List<Event> thisWeek = new ArrayList<>();
         Calendar curWeek = new GregorianCalendar();
@@ -75,7 +75,7 @@ public class EventList {
     }    
     
     
-        /*public List<Event> getThisMonthEvents(){
+        public List<Event> getThisMonthEvents(){
         List<Event> thisMonth = new ArrayList<>();
         Calendar curMonth = new GregorianCalendar();
         int thisyear = curMonth.get(Calendar.YEAR),
