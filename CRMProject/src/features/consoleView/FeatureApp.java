@@ -19,7 +19,7 @@ public class FeatureApp {
         
         Menu mainMenu = new Menu("Main Menu", menus);
         mainMenu.add(new QuitCMD());
-        //mainMenu.add(new CalendarMenu(menus));
+        mainMenu.add(new CalendarMenu(menus));
         mainMenu.add(new TasksMenu(menus));
         //mainMenu.add(new ContactsMenu(menus));
         

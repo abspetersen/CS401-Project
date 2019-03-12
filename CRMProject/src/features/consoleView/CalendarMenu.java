@@ -1,29 +1,24 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- *//*
+
 package features.consoleView;
 
 import consoleKit.MenuItem;
 import features.model.EventList;
+import consoleKit.*;
 
-/**
- *
- * @author abbypetersen
+
  public class CalendarMenu implements MenuItem{
     
-    private EventList week;
+    private MenuStack menus;
     
-    public CalendarMenu(EventList _week){
-        week = _week;
+    public CalendarMenu(MenuStack menus){
+        this.menus = menus;
     }
     
     public void execute(){
-        
-        
-        subMenu.add(new DisplayWeek(chosenList));
-        subMenu.add(new AddEvent(chosenList));
+        Menu calendarSubMenu = new Menu("Calendar Submenu", menus);
+        calendarSubMenu.add(new DisplayWeek());
+        calendarSubMenu.add(new AddEvent());
+        calendarSubMenu.add(new ReturnFromMenu("Main Menu", menus));
     }
     
     
@@ -33,4 +28,4 @@ import features.model.EventList;
         return "Calendar";
     } 
 }
-*/
+
