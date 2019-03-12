@@ -8,28 +8,38 @@ package features.model;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author abbypetersen
- */
+
 public class AllTasks {
-    private static final int NO_CHOICE = -1;
-    private final List<Task> alltasks;
+    //private static final int NO_CHOICE = -1;
+    private final List<Task> list;
     private int chosenList;
 
     // Initialize contacts to empty list
     public AllTasks() {
-        alltasks = new ArrayList<>();
-        chosenList = NO_CHOICE;    // no list chosen
+        list = new ArrayList<>();
+
     }
     
       // set the "current" list
     public void setFocus(int index) {
         chosenList = index;
     }
+    
 
-    // Add a reminder to the "current" list
-    public void addContact(Task task) {
-        alltasks.add(task);
+    // Add a task to the "current" list
+    public void addTask(Task task) {
+        list.add(task);
     }
+    
+    public int getListSize() {
+        return list.size();
+    }
+    
+    public void viewList() {
+        for (int i = 0; i < list.size(); i++) {
+            System.out.print(i + ": ");
+            list.get(i).viewTask();
+        }
+    }
+        
 }

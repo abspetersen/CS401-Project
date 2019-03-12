@@ -1,18 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package features.consoleView;
 
-/**
- *
- * @author abbypetersen
- */
-public class DisplayWeek {
+package features.consoleView;
+import consoleKit.*;
+import features.model.*;
+
+public class DisplayWeek implements MenuItem {
     
+    CurrentWeek thisWeek;
+    
+    public DisplayWeek(CurrentWeek thisWeek) {
+        this.thisWeek = thisWeek;
+    }
+    
+    // Display dates and number of events in that Day's EventList.
     public void execute(){
-        for()
+        thisWeek.displayDays();
     }
     
     // Description of this command

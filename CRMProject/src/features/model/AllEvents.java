@@ -1,8 +1,9 @@
 /*
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
- */
+ 
 package features.model;
 
 import java.util.ArrayList;
@@ -10,7 +11,7 @@ import java.util.List;
 /**
  *
  * @author abbypetersen
- */
+ 
 public class AllEvents {
     private static final int NO_CHOICE = -1;
     private final List<EventList> allevs;
@@ -54,3 +55,5 @@ public class AllEvents {
         return allevs.get(chosenList);
     }
 }
+
+*/

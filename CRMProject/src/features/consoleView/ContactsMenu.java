@@ -5,14 +5,29 @@
  */
 package features.consoleView;
 
+import consoleKit.Menu;
+import consoleKit.MenuItem;
+import consoleKit.MenuStack;
+import consoleKit.ReturnFromMenu;
+
 /**
  *
  * @author abbypetersen
  */
-public class ContactsMenu {
+public class ContactsMenu implements MenuItem{
     
-     public void execute(){
+    private MenuStack menus;
+    
+    public ContactsMenu(MenuStack menus) {
+        this.menus = menus;
+    }
+    
+    public void execute(){
+        Menu contactsSubMenu = new Menu("Contacts Submenu", menus);
         
+        contactsSubMenu.add(new DisplayContacts());
+        contactsSubMenu.add(new AddContact());
+        contactsSubMenu.add(new ReturnFromMenu("Main Menu", menus));
     }
     
      // Description of this command

@@ -7,30 +7,34 @@ package features.model;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
-/**
- *
- * @author abbypetersen
- */
-public class Event {
-    private String desc;
-    private Calendar eventTime;
-    
-      public Event(String _desc) {
-        desc = _desc;
-    }
 
-    public Event(String _desc, Calendar _eventTime) {
-        desc = _desc;
-        eventTime = _eventTime;
+// Event will be an object that holds an event's name, date, and whether user
+// will be reminded of this event.
+public class Event {
+    String eventName;       // Name of event.
+    Calendar eventTime;     // Date of event.
+    boolean wantReminder;   // Set reminder?
+    
+    // Constructor.
+    public Event(String name, Calendar time, boolean r) {
+        this.eventName = name;
+        this.eventTime = time;
+        this.wantReminder = r;
     }
     
-    public String getDesc() {
-        return desc;
+    // Getter for eventName.
+    public String getEventName() {
+        return eventName;
     }
     
-    public Calendar getTime() {
+    // Getter for eventTime.
+    public Calendar getEventTime() {
         return eventTime;
     }
     
-    
+    // Getter for wantReminder.
+    public boolean getWantReminder() {
+        return wantReminder;
+    }
+  
 }
