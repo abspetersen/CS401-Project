@@ -26,8 +26,9 @@ public class TasksMenu implements MenuItem{
         Menu taskSubMenu = new Menu("Task Submenu", menus);
         
         taskSubMenu.add(new DisplayTasks());
+        taskSubMenu.add(new AddTask());
         taskSubMenu.add(new ReturnFromMenu("Main Menu", menus));
-        //taskSubMenu.add(new AddTask());
+        
         
         
     }
@@ -35,6 +36,6 @@ public class TasksMenu implements MenuItem{
     // Description of this command
     @Override
     public String toString() {
-        return "Tasks";
+        return "Task Menu";
     }
 }

@@ -5,7 +5,10 @@
  */
 package features.consoleView;
 
+import consoleKit.Menu;
 import consoleKit.MenuItem;
+import consoleKit.MenuStack;
+import consoleKit.ReturnFromMenu;
 
 /**
  *
@@ -13,10 +16,18 @@ import consoleKit.MenuItem;
  */
 public class ContactsMenu implements MenuItem{
     
+    private MenuStack menus;
     
+    public ContactsMenu(MenuStack menus) {
+        this.menus = menus;
+    }
     
-     public void execute(){
+    public void execute(){
+        Menu contactsSubMenu = new Menu("Contacts Submenu", menus);
         
+        contactsSubMenu.add(new DisplayContacts());
+        contactsSubMenu.add(new AddContact());
+        contactsSubMenu.add(new ReturnFromMenu("Main Menu", menus));
     }
     
      // Description of this command

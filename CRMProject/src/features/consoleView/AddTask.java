@@ -5,14 +5,20 @@
  */
 package features.consoleView;
 
+import consoleKit.MenuItem;
+
 /**
  *
  * @author abbypetersen
  */
-public class AddTask {
+public class AddTask implements MenuItem{
+    
+    public AddTask() {
+        
+    }
     
     public void execute(){
-        
+        System.out.println("We are adding a task!!!");
     }
     
     // Description of this command
