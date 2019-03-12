@@ -13,13 +13,24 @@ import consoleKit.MenuItem;
  */
 public class DisplayContacts implements MenuItem {
    
+     public ContactList contacts;
+    
+    public DisplayContacts(ContactList _contacts){
+        contacts = _contacts;
+    }
+    
+    @Override
     public void execute(){
-        
+        for (Contact con: contacts.getContacts()){
+            System.out.print(con.getName() + ": ");
+            System.out.print(con.getPhone() + ", ");
+            System.out.print(con.getEmail() + ". \n");
+        }
     }
     
     // Description of this command
     @Override
     public String toString() {
-        return "View Contacts";
+        return "View All Contacts";
     } 
 }
