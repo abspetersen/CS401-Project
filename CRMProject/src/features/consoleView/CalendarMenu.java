@@ -21,7 +21,8 @@ import features.model.CurrentWeek;
     public void execute(){
         Menu calendarSubMenu = new Menu("Calendar Submenu", menus);
         calendarSubMenu.add(new DisplayWeek(thisWeek));
-        calendarSubMenu.add(new AddEvent());
+        calendarSubMenu.add(new DisplayEvents(thisWeek));
+        calendarSubMenu.add(new AddEvent(thisWeek));
         calendarSubMenu.add(new ReturnFromMenu("Main Menu", menus));
     }
     
