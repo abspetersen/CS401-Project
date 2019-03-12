@@ -19,7 +19,9 @@ public class FeatureAppMain {
     public static void main(String[] args) {
         MenuStack menus = new MenuStack();
         
+        //calendar stuff
         CurrentWeek thisWeek = new CurrentWeek();   // Initialize CurrentWeek list?
+        //
         
         //junk for Tasks
         AllTasks tasklist = new AllTasks();
