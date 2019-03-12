@@ -6,18 +6,19 @@
 package features.consoleView;
 
 import consoleKit.MenuItem;
+import features.model.AllContacts;
 import features.model.Contact;
-import features.model.ContactList;
+
 
 /**
  *
  * @author abbypetersen
  */
-public class DisplayContacts implements MenuItem {
+public class DisplayContacts implements MenuItem{
    
-     public ContactList contacts;
+    public AllContacts contacts;
     
-    public DisplayContacts(ContactList _contacts){
+    public DisplayContacts(AllContacts _contacts){
         contacts = _contacts;
     }
     

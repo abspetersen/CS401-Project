@@ -24,4 +24,12 @@ public class Contact {
     public String getName() {
         return name;
 }
+    
+    public int getPhone() {
+        return phone;
+    }
+    
+    public String getEmail() {
+        return email;
+    }
 }

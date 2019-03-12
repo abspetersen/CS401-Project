@@ -28,11 +28,13 @@ public class FeatureAppMain {
         AllTasks tasklist = new AllTasks();
         //
         
+        
+        
         Menu mainMenu = new Menu("Main Menu", menus);
         mainMenu.add(new QuitCMD());
         mainMenu.add(new CalendarMenu(menus, thisWeek));    // need to pass thisWeek?
         mainMenu.add(new TasksMenu(menus, tasklist));
-        //mainMenu.add(new ContactsMenu(menus));
+        mainMenu.add(new ContactsMenu(menus));
         
     
         

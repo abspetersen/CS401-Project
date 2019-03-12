@@ -7,8 +7,9 @@ package features.consoleView;
 
 import static consoleKit.Console.STDIN;
 import consoleKit.MenuItem;
+import features.model.AllContacts;
 import features.model.Contact;
-import features.model.ContactList;
+
 
 /**
  *
@@ -16,9 +17,9 @@ import features.model.ContactList;
  */
 public class AddContact implements MenuItem{
     
-       private ContactList contacts;
+    private AllContacts contacts;
     
-    public AddContact(ContactList cons){
+    public AddContact(AllContacts cons){
         contacts = cons;
     }
     
@@ -30,7 +31,7 @@ public class AddContact implements MenuItem{
         System.out.print("Enter the email of the new contact: ");
         String email = STDIN.next();
         Contact c = new Contact(name, pnum, email);
-        contacts.add(c);
+        contacts.addContact(c);
     }
     
     // Description of this command

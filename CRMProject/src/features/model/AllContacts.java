@@ -33,4 +33,8 @@ public class AllContacts {
     public void addContact(Contact con) {
         allcontacts.add(con);
     }
+    
+    public List<Contact> getContacts(){
+        return allcontacts;
+    }
 }
