@@ -9,6 +9,7 @@ import consoleKit.Menu;
 import consoleKit.MenuItem;
 import consoleKit.MenuStack;
 import consoleKit.ReturnFromMenu;
+import features.model.AllContacts;
 
 /**
  *

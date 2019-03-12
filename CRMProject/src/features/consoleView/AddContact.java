@@ -5,7 +5,10 @@
  */
 package features.consoleView;
 
+import static consoleKit.Console.STDIN;
 import consoleKit.MenuItem;
+import features.model.Contact;
+import features.model.ContactList;
 
 /**
  *

@@ -10,6 +10,7 @@ import consoleKit.MenuStack;
 import consoleKit.QuitCMD;
 import features.model.AllTasks;
 import features.model.CurrentWeek;
+import features.consoleView.*;
 
 /**
  *
@@ -31,7 +32,7 @@ public class FeatureAppMain {
         mainMenu.add(new QuitCMD());
         mainMenu.add(new CalendarMenu(menus, thisWeek));    // need to pass thisWeek?
         mainMenu.add(new TasksMenu(menus, tasklist));
-        mainMenu.add(new ContactsMenu(menus));
+        //mainMenu.add(new ContactsMenu(menus));
         
     
         

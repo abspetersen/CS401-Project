@@ -6,6 +6,8 @@
 package features.consoleView;
 
 import consoleKit.MenuItem;
+import features.model.Contact;
+import features.model.ContactList;
 
 /**
  *
