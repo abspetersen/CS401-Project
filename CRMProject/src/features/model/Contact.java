@@ -12,10 +12,10 @@ package features.model;
 public class Contact {
     
     private final String name;
-    private final int phone;
+    private final long phone;
     private final String email;
     
-      public Contact(String _name, int _phone, String _email) {
+      public Contact(String _name, long _phone, String _email) {
         name = _name;
         phone = _phone;
         email = _email;
@@ -23,9 +23,9 @@ public class Contact {
     
     public String getName() {
         return name;
-}
+    }
     
-    public int getPhone() {
+    public long getPhone() {
         return phone;
     }
     
