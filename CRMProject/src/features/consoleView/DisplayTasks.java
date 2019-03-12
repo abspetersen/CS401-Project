@@ -5,14 +5,20 @@
  */
 package features.consoleView;
 
+import consoleKit.MenuItem;
+
 /**
  *
  * @author abbypetersen
  */
-public class DisplayTasks {
+public class DisplayTasks implements MenuItem {
+
+    public DisplayTasks() {
+        
+    }
     
      public void execute(){
-        
+        System.out.println("We are in display tasks execute area");
     }
     
     // Description of this command

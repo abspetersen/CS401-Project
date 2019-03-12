@@ -5,11 +5,15 @@
  */
 package features.consoleView;
 
+import consoleKit.MenuItem;
+
 /**
  *
  * @author abbypetersen
  */
-public class ContactsMenu {
+public class ContactsMenu implements MenuItem{
+    
+    
     
      public void execute(){
         

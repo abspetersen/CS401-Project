@@ -5,16 +5,31 @@
  */
 package features.consoleView;
 
+import consoleKit.Menu;
+import consoleKit.MenuItem;
+import consoleKit.MenuStack;
+import consoleKit.ReturnFromMenu;
+
 /**
  *
  * @author abbypetersen
  */
-public class TasksMenu {
+public class TasksMenu implements MenuItem{
+    
+    private MenuStack menus;
+    
+    public TasksMenu(MenuStack menus) {
+        this.menus = menus;   
+    }
     
      public void execute(){
+        Menu taskSubMenu = new Menu("Task Submenu", menus);
         
-        subMenu.add(new DisplayTasks(chosenList));
-        subMenu.add(new AddTask(chosenList));
+        taskSubMenu.add(new DisplayTasks());
+        taskSubMenu.add(new ReturnFromMenu("Main Menu", menus));
+        //taskSubMenu.add(new AddTask());
+        
+        
     }
    
     // Description of this command

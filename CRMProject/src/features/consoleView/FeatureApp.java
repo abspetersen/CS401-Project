@@ -7,7 +7,7 @@ package features.consoleView;
 
 import consoleKit.Menu;
 import consoleKit.MenuStack;
-import consoleKit.QuitCmd;
+import consoleKit.QuitCMD;
 
 /**
  *
@@ -16,6 +16,13 @@ import consoleKit.QuitCmd;
 public class FeatureApp {
     public static void main(String[] args) {
         MenuStack menus = new MenuStack();
+        
+        Menu mainMenu = new Menu("Main Menu", menus);
+        mainMenu.add(new QuitCMD());
+        mainMenu.add(new CalendarMenu(menus));
+        mainMenu.add(new TasksMenu(menus));
+        //mainMenu.add(new ContactsMenu(menus));
+        
     
         
         System.out.println("Customer Relations Management");
