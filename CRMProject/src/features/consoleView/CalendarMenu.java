@@ -4,19 +4,23 @@ package features.consoleView;
 import consoleKit.MenuItem;
 import features.model.EventList;
 import consoleKit.*;
+import features.model.CurrentWeek;
 
 
  public class CalendarMenu implements MenuItem{
     
     private MenuStack menus;
     
-    public CalendarMenu(MenuStack menus){
+    CurrentWeek thisWeek;   // CurrentWeek.****
+    
+    public CalendarMenu(MenuStack menus, CurrentWeek thisWeek){
         this.menus = menus;
+        this.thisWeek = thisWeek;
     }
     
     public void execute(){
         Menu calendarSubMenu = new Menu("Calendar Submenu", menus);
-        calendarSubMenu.add(new DisplayWeek());
+        calendarSubMenu.add(new DisplayWeek(thisWeek));
         calendarSubMenu.add(new AddEvent());
         calendarSubMenu.add(new ReturnFromMenu("Main Menu", menus));
     }
