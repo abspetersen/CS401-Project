@@ -6,19 +6,21 @@
 package features.consoleView;
 
 import consoleKit.MenuItem;
+import features.model.AllTasks;
 
-/**
- *
- * @author abbypetersen
- */
+
 public class DisplayTasks implements MenuItem {
 
-    public DisplayTasks() {
-        
+    private AllTasks list;
+    
+    public DisplayTasks(AllTasks list) {
+        this.list = list;
     }
     
      public void execute(){
-        System.out.println("We are in display tasks execute area");
+        System.out.println("Displaying tasks...");
+        
+        list.viewList();
     }
     
     // Description of this command

@@ -8,6 +8,7 @@ package features.consoleView;
 import consoleKit.Menu;
 import consoleKit.MenuStack;
 import consoleKit.QuitCMD;
+import features.model.AllTasks;
 
 /**
  *
@@ -17,10 +18,14 @@ public class FeatureAppMain {
     public static void main(String[] args) {
         MenuStack menus = new MenuStack();
         
+        //junk for Tasks
+        AllTasks tasklist = new AllTasks();
+        //
+        
         Menu mainMenu = new Menu("Main Menu", menus);
         mainMenu.add(new QuitCMD());
         mainMenu.add(new CalendarMenu(menus));
-        mainMenu.add(new TasksMenu(menus));
+        mainMenu.add(new TasksMenu(menus, tasklist));
         mainMenu.add(new ContactsMenu(menus));
         
     

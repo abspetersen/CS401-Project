@@ -9,6 +9,7 @@ import consoleKit.Menu;
 import consoleKit.MenuItem;
 import consoleKit.MenuStack;
 import consoleKit.ReturnFromMenu;
+import features.model.AllTasks;
 
 /**
  *
@@ -17,16 +18,19 @@ import consoleKit.ReturnFromMenu;
 public class TasksMenu implements MenuItem{
     
     private MenuStack menus;
+    private AllTasks list;
     
-    public TasksMenu(MenuStack menus) {
+    public TasksMenu(MenuStack menus, AllTasks list) {
         this.menus = menus;   
+        this.list = list;
     }
+
     
      public void execute(){
         Menu taskSubMenu = new Menu("Task Submenu", menus);
         
-        taskSubMenu.add(new DisplayTasks());
-        taskSubMenu.add(new AddTask());
+        taskSubMenu.add(new DisplayTasks(list));
+        taskSubMenu.add(new AddTask(list));
         taskSubMenu.add(new ReturnFromMenu("Main Menu", menus));
         
         

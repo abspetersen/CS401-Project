@@ -5,17 +5,27 @@
  */
 package features.model;
 
-/**
- *
- * @author abbypetersen
- */
+
 public class Task {
     
-    private final String title;
+    private final String name;
     private final String desc;
     
-    public Task(String _title, String _desc){
-        title = _title;
-        desc = _desc;
+    public Task(String name, String desc){
+        this.name = name;
+        this.desc = desc;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+    
+    public void viewTask() {
+        System.out.println(name);
+        System.out.println(desc);
     }
 }
