@@ -8,10 +8,7 @@ package features.model;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author abbypetersen
- */
+
 public class AllTasks {
     private static final int NO_CHOICE = -1;
     private final List<Task> alltasks;
@@ -29,7 +26,7 @@ public class AllTasks {
     }
 
     // Add a reminder to the "current" list
-    public void addContact(Task task) {
+    public void addTask(Task task) {
         alltasks.add(task);
     }
 }
