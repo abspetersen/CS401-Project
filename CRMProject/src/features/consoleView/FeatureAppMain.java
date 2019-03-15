@@ -7,6 +7,7 @@ import consoleKit.QuitCMD;
 import features.model.AllContacts;
 import features.model.AllTasks;
 import features.model.CurrentWeek;
+import features.consoleView.*;
 
 
 public class FeatureAppMain {
