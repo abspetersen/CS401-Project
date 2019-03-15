@@ -30,8 +30,16 @@ public class AllContacts {
     public void addContact(Contact con) {
         allcontacts.add(con);   
     }
+    
+    public Contact getContact(int index) {
+        return allcontacts.get(index);
+    }
 
     public List<Contact> getContacts(){
         return allcontacts; 
+    }
+    
+    public int getContactListSize() {
+        return allcontacts.size();
     }
 }
