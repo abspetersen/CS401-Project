@@ -25,7 +25,6 @@ public class Task {
     }
     
     public void viewTask() {
-        System.out.println(name);
-        System.out.println(desc);
+        System.out.println(name + ": " + desc);
     }
 }

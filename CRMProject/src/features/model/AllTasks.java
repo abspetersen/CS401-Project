@@ -25,6 +25,18 @@ public class AllTasks {
         chosenList = index;
     }
     
+    //gets for certain tasks
+    public Task getFirstTask() {
+        return list.get(0);
+    }
+    
+    public Task getTask(int index) {
+        return list.get(index);
+    }
+    
+    public Task getLastTask() {
+        return list.get(list.size() - 1);
+    }
 
     // Add a task to the "current" list
     public void addTask(Task task) {
@@ -37,7 +49,7 @@ public class AllTasks {
     
     public void viewList() {
         for (int i = 0; i < list.size(); i++) {
-            System.out.print(i + ": ");
+            System.out.print(i + ". ");
             list.get(i).viewTask();
         }
     }
